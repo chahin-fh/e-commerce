@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title></title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='style.css'>
+    <script src='main.js'></script>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="text">
+           insert your product
+        </div>
+        <form action="#">
+            <div>
+                <input type="file">
+            </div>
+           <div class="form-row">
+              <div class="input-data">
+                 <input class="inp" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">title</label>
+              </div>
+              <div class="input-data">
+                 <input class="inp" type="text" required>
+                 <div class="underline"></div>
+                 <label for="">price</label>
+              </div>
+           </div>
+           <div class="form-row">
+              <div class="input-data">
+                <input onclick="document.getElementById('cat1').disabled = false; document.getElementById('oci').disabled = true;" type="radio" name="type" checked="checked" class="rd">
+                 <select name="" id="cat1">
+                    <option value=""></option>
+                 </select>
+                 <label for="" id="cat">categorie</label>
+              </div>
+              <div class="input-data">
+                <input onclick="document.getElementById('oci').disabled = false; document.getElementById('cat1').disabled = true;" type="radio" name="type" checked="checked" id ="oc"class="rd">
+                 <input class="inp" type="text" id="oci" required>
+                 <div class="underline"></div>
+                 <label for="">other categorie</label>
+              </div>
+           </div>
+           <div class="form-row">
+           <div class="input-data textarea">
+              <textarea rows="8" cols="80" required></textarea>
+              <br />
+              <div class="underline"></div>
+              <label for="">discreption</label>
+              <br />
+              <!-- HTML !-->
+            <input type="submit" class="button-17" role="button">
+        </form>
+        </div>
+</body>
+</html>
