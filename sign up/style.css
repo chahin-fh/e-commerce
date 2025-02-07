@@ -141,3 +141,17 @@ label[for="showPassword"] {
   color: #ffffff;
   cursor: pointer;
 }
+.password-container {
+  position: relative;
+}
+.password-container input {
+  width: 100%;
+  padding-right: 30px;
+}
+.password-container .toggle-password {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
