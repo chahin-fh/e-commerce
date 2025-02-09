@@ -13,7 +13,7 @@ function varif(){
   }else if (!varif_mp1(pass)){
     alert("verifer votre passwords!!!");
     return false;
-  }else if (!varif_mp2(pass2)){
+  }else if (!varif_mp2(pass2,pass)){
     alert("verifer votre passwords 2!!!");
     return false;
   }
