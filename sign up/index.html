@@ -29,7 +29,6 @@
         </div>
         <input type="submit" id="lg" value="Sign up">
     </form>
-
     <script>
         document.getElementById('togglePassword').addEventListener('click', function() {
             const password = document.getElementById('password');
@@ -38,7 +37,6 @@
             this.classList.toggle('fa-eye');
             this.classList.toggle('fa-eye-slash');
         });
-
         document.getElementById('toggleCpass').addEventListener('click', function() {
             const cpass = document.getElementById('cpass');
             const type = cpass.getAttribute('type') === 'password' ? 'text' : 'password';
