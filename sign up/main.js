@@ -1,4 +1,4 @@
-function varif(){
+function verif(){
   let user=document.getElementById("username").value;
   let mail=document.getElementById("email").value;
   let adr=document.getElementById("adresse").value;
