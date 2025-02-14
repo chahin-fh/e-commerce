@@ -6,7 +6,6 @@ session_start();
 
 
 <!DOCTYPE html>
-<!-- Coding By CodingNepal - www.codingnepalweb.com -->
 <html>
 <head>
   <meta charset="UTF-8">
