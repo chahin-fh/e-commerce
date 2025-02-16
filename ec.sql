@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2025 at 09:37 PM
+-- Generation Time: Feb 16, 2025 at 08:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -20,6 +20,27 @@ SET time_zone = "+00:00";
 --
 -- Database: `ec`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `mail`, `pass`) VALUES
+(1, 'MALEKFHIMA', 'malekfhima1@gmail.com', 'azertyuiop'),
+(2, 'MALEKFHIMA', 'malekfhima1@gmail.com', 'azertyuiop');
 
 -- --------------------------------------------------------
 
@@ -66,6 +87,12 @@ CREATE TABLE `prod` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
@@ -80,6 +107,12 @@ ALTER TABLE `prod`
 --
 -- AUTO_INCREMENT for dumped tables
 --
+
+--
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `client`
