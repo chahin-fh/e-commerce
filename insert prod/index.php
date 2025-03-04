@@ -34,13 +34,13 @@
               <div class="input-data">
                 <input onclick="document.getElementById('cat1').disabled = false; document.getElementById('oci').disabled = true;" type="radio" name="type" checked="checked" class="rd">
                  <select name="cat" id="cat1" name="cat1">
-                    <?php
+                 <?php/*
                         include("../cnx.php");
                         $res = mysqli_query($cnx , "SELECT DISTINCT(cat) from prod");
                         while($t = mysqli_fetch_array($res)){
                            echo"<option value='$t[0]'>$t[0]</option>";
-                        }
-                     ?>
+                        }*/
+                  ?>
                  </select>
                  <label for="" id="cat">Categorie</label>
               </div>
