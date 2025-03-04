@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 09, 2025 at 10:06 AM
+-- Generation Time: Feb 16, 2025 at 08:09 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -24,6 +24,27 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `mail` varchar(255) NOT NULL,
+  `pass` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`id`, `name`, `mail`, `pass`) VALUES
+(1, 'MALEKFHIMA', 'malekfhima1@gmail.com', 'azertyuiop'),
+(2, 'MALEKFHIMA', 'malekfhima1@gmail.com', 'azertyuiop');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `client`
 --
 
@@ -31,7 +52,7 @@ CREATE TABLE `client` (
   `id` int(255) NOT NULL,
   `username` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
+  `passwords` varchar(255) NOT NULL,
   `adresse` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
@@ -39,13 +60,12 @@ CREATE TABLE `client` (
 -- Dumping data for table `client`
 --
 
-INSERT INTO `client` (`id`, `username`, `email`, `password`, `adresse`) VALUES
-(5, 'azerazer', 'chahinfhima@gamil.com', 'razerazer', 'zerazeraer'),
-(6, '', '', '', ''),
-(7, 'MALEKFHIMA', 'malekfhima1@gmail.com', 'azertyuiop', '33 rue imem malek'),
-(8, 'az', 'malekfhima1@gmail.com', 'azertyuiop', '33 rue imem malek'),
-(9, 'az', 'malekfhima1@gmail.com', 'azertyuiop', '33 rue imem malek'),
-(10, 'az', 'malekfhima1@gmail.com', 'azer', '33 rue imem malek');
+INSERT INTO `client` (`id`, `username`, `email`, `passwords`, `adresse`) VALUES
+(1, 'AA', 'malekfhima1@gmail.com', 'AZERTYUIOP', 'msaken'),
+(2, 'aaa', 'malali3b@gmail.com', 'aa', 'aa'),
+(3, 'aa', 'malekfhima1@gmail.com', 'aze', 'aa'),
+(4, 'aa', 'malekfhima1@gmail.com', 'aze', 'aa'),
+(5, 'aa', 'malekfhima1@gmail.com', 'aze', 'aa');
 
 -- --------------------------------------------------------
 
@@ -67,6 +87,12 @@ CREATE TABLE `prod` (
 --
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `client`
 --
 ALTER TABLE `client`
@@ -83,10 +109,16 @@ ALTER TABLE `prod`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
 -- AUTO_INCREMENT for table `client`
 --
 ALTER TABLE `client`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `prod`
