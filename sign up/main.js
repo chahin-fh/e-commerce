@@ -39,18 +39,4 @@ function verif_mail(ch) {
   let domaine = ch.substring(pos);
   return domainesAcceptes.includes(domaine);
 }
-function verif_mp1(ch) {
-  let i = 0;
-  while (i < ch.length) {
-      let char = ch.charAt(i).toUpperCase();
-      if ((char >= 'A' && char <= 'Z') || (ch.charAt(i) >= "0" && ch.charAt(i) <= "9") || (ch.charAt(i) == ".")) {
-          i++;
-      } else {
-          break;
-      }
-  }
-  return i == ch.length && ch.length >= 8;
-}
-function verif_mp2(ch, mp1) {
-  return verif_mp1(ch) && ch == mp1;
-}
+

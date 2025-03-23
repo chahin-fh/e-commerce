@@ -5,14 +5,18 @@
 }
 
 body {
-  background-image: url("../back.jpg");
+  background-image: url("bg24.jpg");
   background-repeat: no-repeat;
-  background-size: 1980px 1080px;
+  background-size: cover; /* Ensures the image covers the entire background */
+  background-position: center; /* Centers the image */
+  background-attachment: fixed; /* Optional: Keeps the background fixed while scrolling */
+  min-height: 100vh; /* Ensures the body takes at least the full viewport height */
 }
 
 form {
-  height: 650px;
-  width: 400px;
+  height: auto; /* Make height flexible */
+  width: 90%; /* Use percentage for width */
+  max-width: 400px; /* Set a maximum width */
   background-color: rgba(255, 255, 255, 0.13);
   position: absolute;
   transform: translate(-50%, -50%);
@@ -22,7 +26,7 @@ form {
   backdrop-filter: blur(10px);
   border: 2px solid rgba(255, 255, 255, 0.1);
   box-shadow: 0 0 40px rgba(8, 7, 16, 0.6);
-  padding: 50px 35px;
+  padding: 30px 25px; /* Reduce padding for smaller screens */
 }
 
 form * {
@@ -34,22 +38,22 @@ form * {
 }
 
 form h3 {
-  font-size: 32px;
+  font-size: 28px; /* Reduce font size for smaller screens */
   font-weight: 500;
-  line-height: 42px;
+  line-height: 36px; /* Adjust line height */
   text-align: center;
 }
 
 label {
   display: block;
-  margin-top: 30px;
-  font-size: 16px;
+  margin-top: 20px; /* Reduce margin for smaller screens */
+  font-size: 14px; /* Reduce font size for smaller screens */
   font-weight: 500;
 }
 
 input {
   display: block;
-  height: 35px; /* Réduit la hauteur des champs de saisie */
+  height: 35px;
   width: 100%;
   background-color: rgba(255, 255, 255, 0.07);
   border-radius: 3px;
@@ -64,30 +68,33 @@ input {
 }
 
 button {
-  margin-top: 50px;
+  margin-top: 30px; /* Reduce margin for smaller screens */
   width: 100%;
   background-color: #ffffff;
   color: #080710;
-  padding: 15px 0;
-  font-size: 18px;
+  padding: 12px 0; /* Reduce padding for smaller screens */
+  font-size: 16px; /* Reduce font size for smaller screens */
   font-weight: 600;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .social {
-  margin-top: 30px;
+  margin-top: 20px; /* Reduce margin for smaller screens */
   display: flex;
+  flex-direction: column; /* Stack social buttons vertically on small screens */
+  align-items: center; /* Center align social buttons */
 }
 
 .social div {
-  background: red;
-  width: 150px;
+  width: 100%; /* Full width for smaller screens */
+  max-width: 150px; /* Limit maximum width */
   border-radius: 3px;
-  padding: 5px 10px 10px 5px;
+  padding: 10px; /* Adjust padding */
   background-color: rgba(255, 255, 255, 0.27);
   color: #eaf0fb;
   text-align: center;
+  margin-bottom: 10px; /* Add space between social buttons */
 }
 
 .social div:hover {
@@ -95,7 +102,7 @@ button {
 }
 
 .social .fb {
-  margin-left: 25px;
+  margin-left: 0; /* Remove left margin for smaller screens */
 }
 
 .social i {
@@ -141,17 +148,80 @@ label[for="showPassword"] {
   color: #ffffff;
   cursor: pointer;
 }
+
 .password-container {
   position: relative;
 }
+
 .password-container input {
   width: 100%;
   padding-right: 30px;
 }
+
 .password-container .toggle-password {
   position: absolute;
   top: 50%;
   right: 10px;
   transform: translateY(-50%);
   cursor: pointer;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+  form {
+    padding: 20px 15px; /* Further reduce padding for smaller screens */
+  }
+
+  form h3 {
+    font-size: 24px; /* Reduce font size for smaller screens */
+    line-height: 30px;
+  }
+
+  label {
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+
+  input {
+    height: 30px; /* Reduce height for smaller screens */
+    font-size: 12px; /* Reduce font size for smaller screens */
+  }
+
+  button {
+    padding: 10px 0; /* Reduce padding for smaller screens */
+    font-size: 14px; /* Reduce font size for smaller screens */
+  }
+
+  .social div {
+    padding: 8px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  form {
+    width: 95%; /* Increase width for very small screens */
+    padding: 15px 10px; /* Further reduce padding */
+  }
+
+  form h3 {
+    font-size: 20px; /* Reduce font size for very small screens */
+    line-height: 26px;
+  }
+
+  label {
+    font-size: 10px; /* Reduce font size for very small screens */
+  }
+
+  input {
+    height: 25px; /* Reduce height for very small screens */
+    font-size: 10px; /* Reduce font size for very small screens */
+  }
+
+  button {
+    padding: 8px 0; /* Reduce padding for very small screens */
+    font-size: 12px; /* Reduce font size for very small screens */
+  }
+
+  .social div {
+    padding: 6px; /* Reduce padding for very small screens */
+  }
 }
