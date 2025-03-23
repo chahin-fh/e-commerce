@@ -35,7 +35,8 @@
                 <input onclick="document.getElementById('cat1').disabled = false; document.getElementById('oci').disabled = true;" type="radio" name="type" checked="checked" class="rd">
                 <label for="">Categorie</label>
                  <select name="cat" id="cat1" name="cat1">
-                 <?php/*
+                 <?php
+                 /*
                      <option value="">Categorie</option>
                     <?php
 
